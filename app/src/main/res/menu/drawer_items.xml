@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:id="@+id/login_menu"
+        android:icon="@drawable/login"
+        android:title="Login" />
+
+    <item android:id="@+id/logout_menu"
+        android:icon="@drawable/login"
+        android:title="Logout" />
+
+    <item android:id="@+id/calculator_menu"
+        android:icon="@drawable/calculator"
+        android:title="Calculator" />
+
+    <item android:id="@+id/afficher_menu"
+        android:icon="@drawable/afficher"
+        android:title="Afficher" />
+
+    <item android:id="@+id/convert_menu"
+        android:icon="@drawable/convertir"
+        android:title="Convertir" />
+</menu>

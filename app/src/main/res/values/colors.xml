@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="headerMenu">#1091a8</color>
+    <color name="calcBtn">#9bbfbf</color>
+    <color name="equalBtn">#c5706d</color>
+</resources>
