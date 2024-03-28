@@ -2,6 +2,7 @@ package com.myapplicationsqlite;
 
 import static com.myapplicationsqlite.SigininFragment.isLoggedin;
 
+import android.media.Image;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
@@ -10,13 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignupFragment extends Fragment {
 
     EditText etName2, etEmail2, etPassword2;
-    TextView tvRegister, backBtn, tvSignup;
+    TextView backBtn;
     Button bValider2;
     DatabaseHandler db;
 
@@ -33,14 +35,16 @@ public class SignupFragment extends Fragment {
         etEmail2 = rootView.findViewById(R.id.etEmail2);
         etPassword2 = rootView.findViewById(R.id.etPassword2);
         bValider2 = rootView.findViewById(R.id.bValider2);
-        tvRegister = rootView.findViewById(R.id.tvSignUp);
         backBtn = rootView.findViewById(R.id.backToSignin);
-        tvSignup = rootView.findViewById(R.id.tvSignUp);
 
 
         db = new DatabaseHandler(getActivity());
 
-        if (isLoggedin) tvSignup.setText("Add client");
+        if(isLoggedin){
+            etName2.setText("Enter a name...");
+            etEmail2.setText("Enter an email...");
+            etPassword2.setText("Enter a password...");
+        }
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

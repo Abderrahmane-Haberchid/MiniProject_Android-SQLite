@@ -9,17 +9,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 
 public class ConvertFragment extends Fragment {
 
-    String[] items = {"Celsius", "Farhneit", "Kelvin"};
+    TextInputLayout textInputLayoutFrom, textInputLayoutTo;
+    MaterialAutoCompleteTextView from, to;
+    EditText etValue;
+    TextView tvResult;
 
-    ArrayAdapter<String> arrayAdapter;
-    MultiAutoCompleteTextView from, to;
     public ConvertFragment() {
         // Required empty public constructor
     }
@@ -27,31 +33,17 @@ public class ConvertFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_convert, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_convert, container, false);
 
-        from = view.findViewById(R.id.itemFrom);
-        to = view.findViewById(R.id.itemTo);
-
-        arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.fragment_convert, items);
-
-        from.setAdapter(arrayAdapter);
-        to.setAdapter(arrayAdapter);
-        from.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getActivity(), "Clicked item " +item, Toast.LENGTH_LONG).show();
-            }
-        });
-        to.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getActivity(), "Clicked item " +item, Toast.LENGTH_LONG).show();
-            }
-        });
+        from = rootView.findViewById(R.id.itemFrom);
+        to = rootView.findViewById(R.id.itemTo);
+        textInputLayoutFrom = rootView.findViewById(R.id.inputLayoutFrom);
+        textInputLayoutTo = rootView.findViewById(R.id.inputLayoutTo);
+        etValue = rootView.findViewById(R.id.etValue);
+        tvResult = rootView.findViewById(R.id.tvResult);
 
 
-        return view;
+
+        return rootView;
     }
 }

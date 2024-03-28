@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".AffichageFragment">
 
         <LinearLayout
@@ -17,6 +18,7 @@
                 android:id="@+id/userCount"
                 android:textSize="22sp"
                 android:text="5 clients"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginTop="15dp"/>
 
@@ -26,6 +28,7 @@
                 android:layout_height="400dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="20dp"
+                android:background="@drawable/textfield"
                 android:textSize="15dp"
                 android:text="TextView"/>
 

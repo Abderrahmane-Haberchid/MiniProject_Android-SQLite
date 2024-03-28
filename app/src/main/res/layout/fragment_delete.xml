@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".DeleteFragment">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorLink="@color/black"
         android:textSize="25sp"
         android:text="Back"
@@ -21,7 +22,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="120dp"
             android:layout_marginStart="40dp"
             android:gravity="center"
             android:orientation="horizontal">
@@ -29,7 +30,9 @@
             <EditText
                 android:id="@+id/tvSearch"
                 android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/textfield"
+                android:padding="15dp"
                 android:ems="10"
                 android:hint="Search By Email"
                 android:inputType="textEmailAddress" />
@@ -47,7 +50,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="250dp"
             android:layout_marginStart="90dp"
             android:gravity="center"
             android:orientation="vertical">
@@ -55,7 +58,9 @@
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/textfield"
+                android:padding="15dp"
                 android:layout_marginTop="30dp"
                 android:ems="10"
                 android:textSize="20dp"
@@ -65,7 +70,9 @@
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/textfield"
+                android:padding="15dp"
                 android:layout_marginTop="30dp"
                 android:ems="10"
                 android:textSize="20dp"

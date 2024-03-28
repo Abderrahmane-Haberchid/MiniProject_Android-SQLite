@@ -56,6 +56,6 @@ public class Client {
     @Override
     public String toString() {
         return
-                "id: " + id + "    " + name + "\n" + "     " + email;
+                " " + id + "    " + name + "    " + email;
     }
 }
