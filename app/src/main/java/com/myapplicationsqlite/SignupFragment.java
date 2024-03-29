@@ -2,6 +2,7 @@ package com.myapplicationsqlite;
 
 import static com.myapplicationsqlite.SigininFragment.isLoggedin;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -75,11 +76,18 @@ public class SignupFragment extends Fragment {
                 {
                     Client client = new Client(etName2.getText().toString(), etEmail2.getText().toString(), etPassword2.getText().toString());
                     db.addClient(client);
-                    Toast.makeText(getActivity(), "User added successfuly", Toast.LENGTH_LONG).show();
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .setReorderingAllowed(true)
-                            .replace(R.id.fragment_container, AffichageFragment.class, null)
-                            .commit();
+                    if (isLoggedin) {
+                        Toast.makeText(getActivity(), "User added successfuly", Toast.LENGTH_LONG).show();
+                        getActivity().getSupportFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_container, AffichageFragment.class, null)
+                                .commit();
+                    }
+                    else {
+                        isLoggedin = true;
+                        startActivity(new Intent(getActivity(), MainActivity.class));
+                        Toast.makeText(getActivity(), "Account added!", Toast.LENGTH_LONG).show();
+                    }
                 }
                 else
                     Toast.makeText(getActivity(), "All fields are required !", Toast.LENGTH_LONG).show();

@@ -25,7 +25,7 @@
          android:id="@+id/etValue"
           android:layout_width="250dp"
           android:layout_height="50dp"
-         android:text="Enter a value to convert..."
+         android:hint="Enter a value to convert..."
          android:background="@drawable/textfield"
          android:padding="10dp"
          android:layout_marginBottom="40dp" />
@@ -35,7 +35,6 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginBottom="20dp"
-          android:hint="Select a unity..."
           style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
           >
 
@@ -45,6 +44,7 @@
              android:layout_height="50dp"
              android:padding="15dp"
              android:inputType="none"
+             android:text="From"
              app:simpleItems="@array/option_list"
              />
 
@@ -54,15 +54,15 @@
           android:id="@+id/inputLayoutTo"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:hint="Select a unity..."
           style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
 
          <com.google.android.material.textfield.MaterialAutoCompleteTextView
              android:id="@+id/itemTo"
              android:layout_width="250dp"
-             android:layout_height="40dp"
+             android:layout_height="50dp"
              android:padding="15dp"
              android:inputType="none"
+             android:text="To"
              app:simpleItems="@array/option_list"
              />
       </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +80,7 @@
           android:layout_width="100dp"
           android:layout_height="40dp"
          android:layout_marginTop="50dp"
-          android:text="45"
+          android:text="0"
           android:padding="5dp"
           android:textAlignment="center"
           android:textSize="20sp"

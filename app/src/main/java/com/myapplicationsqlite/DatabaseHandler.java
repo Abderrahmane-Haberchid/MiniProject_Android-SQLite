@@ -19,7 +19,7 @@ import java.util.List;
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "tp_master_db";
+    private static final String DATABASE_NAME = "miniProjectDB";
     private static final String TABLE_CLIENT = "client";
 
     public static String usernameDB, useremailDB;
@@ -72,7 +72,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<Client> clientList = new ArrayList<Client>();
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String sql = "SELECT * FROM " + TABLE_CLIENT;
+        String sql = "SELECT * FROM " + TABLE_CLIENT + " ORDER BY id DESC";
 
         Cursor cursor = db.rawQuery(sql, null);
 
